@@ -1,0 +1,26 @@
+// Typography
+$font-size-base: 0.75rem; // this changes the font-size throughout bootstrap
+
+// Colours
+$white: #fff;
+$danger: #d9534f;
+$secondary: #343a40;
+$green: #ccf1d5;
+$yellow: #FFECB3;
+
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    0: 0,
+    25: 25%,
+    40: 40%,
+    50: 50%,
+    60: 60%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);
+
+$role-badge-border-color: #e1e1e1;

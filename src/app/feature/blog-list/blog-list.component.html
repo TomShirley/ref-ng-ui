@@ -1,0 +1,33 @@
+<div class="h-100 d-flex flex-column">
+    <h4 class="section-header bg-white sticky-top mb-0 p-3">Blogs</h4>
+    <div class="container-fluid content bg-white overflow-auto flex-grow-1 min-h-0">
+        <div class="row h-100">
+            <div class="col-12 h-100">
+                <ngx-datatable
+                    class="bootstrap h-100"
+                    rowHeight="auto"
+                    [headerHeight]="40"
+                    [rows]="rows"
+                    [rowHeight]="50"
+                    [scrollbarV]="true"
+                    [columnMode]="ColumnMode.flex"
+                >
+                    <ngx-datatable-column name="Url" [flexGrow]="1">
+                        <ng-template let-column="column" ngx-datatable-header-template>Url</ng-template>
+                        <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+                            <a [routerLink]="['/', row.id]">
+                                {{row.url}}
+                            </a>
+                        </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-column name="id" [flexGrow]="2">
+                        <ng-template let-column="column" ngx-datatable-header-template>Id</ng-template>
+                        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                            {{row.id}}
+                        </ng-template>
+                    </ngx-datatable-column>
+                </ngx-datatable>
+            </div>
+        </div>
+    </div>
+</div>

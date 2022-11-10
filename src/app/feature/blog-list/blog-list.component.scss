@@ -1,0 +1,25 @@
+@import "../../../assets/_variables";
+
+.ngx-datatable {
+  .datatable-header {
+    .datatable-header-cell {
+      font-weight: bold;
+    }
+  }
+}
+
+.row-color-status-complete {
+  background-color: $green !important;
+}
+
+.row-color-status-notstarted {
+  background-color: $white;
+}
+
+.row-color-status-inprogress {
+  background-color: $yellow !important;
+}
+
+.start-task {
+  color: #007bff;
+}
